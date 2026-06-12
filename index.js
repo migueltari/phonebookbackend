@@ -45,7 +45,7 @@ app.listen(PORT, () => {
 const PORT = process.env.PORT || '0.0.0.0'
         app.listen(PORT, () => {
         	console.log(`Server running on port ${PORT}`)
-    	})
+    	  })
 
 
 let persons = [
@@ -71,6 +71,9 @@ let persons = [
     }
 ]
 
+app.get('/', (request, response) => {
+        response.send('El servidor funciona!')
+        })
 
 app.get('/api/persons', (request, response) => {
         response.json(persons)
