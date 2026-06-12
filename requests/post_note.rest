@@ -1,4 +1,4 @@
-POST https://phonebookbackend-fh07.onrender.com
+POST https://phonebookbackend-fh07.onrender.com/api/persons
 Content-Type: application/json
 
 {

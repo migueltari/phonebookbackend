@@ -9,6 +9,12 @@ app.use(express.json())
 const cors = require('cors')
 app.use(cors())
 
+//En la raíz tenemos la carpeta dist con todo lo
+//necesario para que la aplicación funcione en
+//producción: el frontend se servirá desde el
+//backend en modo estático
+app.use(express.static('dist'))
+
 //Creamos el token person
 //Como morgan se ejecuta en cada petición,
 //hay peticiones, como GET o DELETE, en las
